@@ -13,10 +13,13 @@ Program może być uruchomiony zarówno w wersji przeglądarkowej .wasm jak i w 
 
 ## Obsługa programu
 ### Instalacja wymaganych programów
-#### Instalacja `Cargo` i języka Rust
-`Cargo` jest package managerem oraz narzędziem do kompilacji i instalacji paczek języka Rust. 
-Instrukcje instalacji Cargo w zależności od platformy są opisane na [oficjalnej stronie]{https://doc.rust-lang.org/cargo/getting-started/installation.html}, 
-dodatkowo na wielu platformach linux narzędzie to można znaleźć w oficjalnych repozytoriach.
+#### Instalacja języka Rust - `rustup`
+Instrukcje instalacji języka rust w zależności od platformy są opisane na [oficjalnej stronie języka](https://www.rust-lang.org/tools/install).
+
+Aby zainstalować narzędzia wymagane do kompilacji programów web assembly należy następnie użyć komendy
+
+`rustup target install wasm32-unknown-unknown`
+
 
 #### Instalacja 
 
