@@ -4,7 +4,11 @@
 Ogólny cel projektu jest opisany w readme [repozytorium głównego](https://github.com/apuniacct/js_proj):
 
 ## Założenie programu
-Program zawarty w tym repozytorium ma na celu być przykładowym programem .wasm serwowanym przez program główny projektu. Jest on prostym szkieletem gry napisanym w języku Rust za pomocą silnika [Bevy](https://bevyengine.org/) i biblioteki/pluginu symulacji fizyki [Avian](https://github.com/Jondolf/avian).
+Program zawarty w tym repozytorium ma na celu być przykładowym programem .wasm serwowanym przez program główny projektu. Jest on prostym szkieletem gry napisanym w języku Rust.
+
+Program składa się z prostego środowiska dwuwymiarowego w zbudowanego silniku [Bevy](https://bevyengine.org/) i szkieletu kontrolera postaci opartego na pluginie silnika fizycznego [Avian](https://github.com/Jondolf/avian). Kod programu znajduje się w folderze `src`. Każdy program rust zawiera także plik `Cargo.toml` który definiuje używane paczki i podstawowe parametry kompilacji - jest on ogólnie analogiczny do pliku `package.json` w node.js lub plików make w C/C++.
+
+Kod programu jest opisany dokładnymi komentarzami dotyczącymi funkcjonowania logiki programu. Opis podstawowych elementów semantycznych języka Rust został pominięty.
 
 ## Przygotowanie programu WASM
 ### Instalacja wymaganych programów
@@ -31,6 +35,5 @@ Do kompilacji programu można użyć załączonego w repozytorium skryptu `prepa
 Aby uruchomić program .wasm należy umieścić oba pliki z folderu `bindgen_output` w [programie głównym projektu](https://github.com/apuniacct/js_proj) według instrukcji zawartych w jego repozytorium.
 
 ## Działanie programu
-Program składa się z prostego środowiska dwuwymiarowego w zbudowanego silniku Bevy i szkieletu kontrolera postaci opartego na pluginie silnika fizycznego Avian. Kod programu znajduje się w folderze `src`. Każdy program rust zawiera także plik `Cargo.toml` który definiuje używane paczki i podstawowe parametry kompilacji - jest on ogólnie analogiczny do pliku `package.json` w node.js lub plików make w C/C++.
-
-Kod programu jest opisany dokładnymi komentarzami dotyczącymi funkcjonowania logiki programu. Opis podstawowych elementów semantycznych języka Rust został pominięty.
+Po uruchomieniu programu widoczny jest biały prostokąt oznaczający pozycję kontrolera postaci - sterowanie tym kontrolerem odbywa się za pomocą klawiszy `W S A D`.
+Podczas ruchu są widoczne wizualizacje dwóch wektorów - zielony wektor pokazuje obecną prędkość postaci a niebieski pokazuje przyspieszenie w danym momencie.
